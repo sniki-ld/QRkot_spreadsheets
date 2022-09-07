@@ -39,6 +39,7 @@ ___
 * [FastAPI Users](https://fastapi-users.github.io/fastapi-users/10.1/)
 * [SQLAlchemy](https://www.sqlalchemy.org/)
 * [Alembic](https://alembic.sqlalchemy.org/en/latest/index.html)
+* [Google Sheets](https://developers.google.com/sheets)
 ___
 
 ## Установка
