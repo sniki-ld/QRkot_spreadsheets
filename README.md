@@ -45,7 +45,7 @@ ___
 ## Установка
 Склонируйте проект:
    ```
-   git clone https://github.com/sniki-ld/cat_charity_fund.git
+   git clone https://github.com/sniki-ld/QRkot_spreadsheets.git
    ```
 Перейдите в папку с проектом:
    ```
