@@ -28,5 +28,6 @@ cred = ServiceAccountCreds(scopes=SCOPES, **INFO)
 
 # Создаём экземпляр класса Aiogoogle
 async def get_service():
+    """Создать экземпляр класса Aiogoogle."""
     async with Aiogoogle(service_account_creds=cred) as aiogoogle:
         yield aiogoogle
