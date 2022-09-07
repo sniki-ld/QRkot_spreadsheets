@@ -1,6 +1,6 @@
 # QRkot_spreadseets
 
-Расширяет приложения QRKot
+Расширяет приложение QRKot
 (благотворительный фонд поддержки котиков) возможностью формирования отчёта в гугл-таблице.
 ___
 
@@ -49,7 +49,7 @@ ___
    ```
 Перейдите в папку с проектом:
    ```
-   cd cat_charity_fund
+   cd QRkot_spreadsheets
    ```
 Создайте и активируйте виртуальное окружение:
    ```
@@ -78,6 +78,18 @@ ___
    SECRET=<секретный ключ>
    FIRST_SUPERUSER_EMAIL=<email первого суперпользователя>
    FIRST_SUPERUSER_PASSWORD=<пароль первого суперпользователя>
+   # Добавьте данные своего сервисного аккаунта.
+   TYPE=
+   PROJECT_ID=
+   PRIVATE_KEY_ID=
+   PRIVATE_KEY=
+   CLIENT_EMAIL=
+   CLIENT_ID=
+   AUTH_URI=
+   TOKEN_URI=
+   AUTH_PROVIDER_X509_CERT_URL=
+   CLIENT_X509_CERT_URL=
+   EMAIL= 
    ```
 ___
 
