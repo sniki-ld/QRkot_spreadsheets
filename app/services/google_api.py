@@ -3,8 +3,7 @@ from datetime import datetime, timedelta
 from aiogoogle import Aiogoogle
 
 from app.core.config import settings
-
-FORMAT = "%Y/%m/%d %H:%M:%S"
+from app.services.constants import SHEETS_SERVICE_VERSION, FORMAT, DRIVE_SERVICE_VERSION
 
 
 async def spreadsheets_create(
@@ -12,7 +11,7 @@ async def spreadsheets_create(
 ) -> str:
     """Создать гугл-таблицу с отчётом на диске сервисного аккаунта."""
     now_date_time = datetime.now().strftime(FORMAT)
-    service = await wrapper_services.discover('sheets', 'v4')
+    service = await wrapper_services.discover('sheets', SHEETS_SERVICE_VERSION)
     spreadsheet_body = {
         'properties': {'title': f'Отчет от {now_date_time}',
                        'locale': 'ru_RU'},
@@ -39,7 +38,7 @@ async def set_user_permissions(
     permissions_body = {'type': 'user',
                         'role': 'writer',
                         'emailAddress': settings.email}
-    service = await wrapper_services.discover('drive', 'v3')
+    service = await wrapper_services.discover('drive', SHEETS_SERVICE_VERSION)
     await wrapper_services.as_service_account(
         service.permissions.create(
             fileId=spreadsheetid,
@@ -55,7 +54,7 @@ async def spreadsheets_update_value(
 ) -> None:
     """Записать, полученную из бд информацию в документ с таблицами."""
     now_date_time = datetime.now().strftime(FORMAT)
-    service = await wrapper_services.discover('sheets', 'v4')
+    service = await wrapper_services.discover('sheets', DRIVE_SERVICE_VERSION)
     table_values = [
         ['Отчет от', now_date_time],
         ['Топ проектов по скорости закрытия'],

@@ -53,7 +53,7 @@ class CRUDBase:
         """Создать новый объект."""
         obj_in_data = obj_in.dict()
 
-        if user is not None:
+        if user:
             obj_in_data['user_id'] = user.id
         db_obj = self.model(**obj_in_data)
         session.add(db_obj)
