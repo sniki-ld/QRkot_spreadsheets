@@ -44,65 +44,43 @@ ___
 
 ## Установка
 Склонируйте проект:
-   ```
-   git clone https://github.com/sniki-ld/QRkot_spreadsheets.git
-   ```
+   
+   `git clone https://github.com/sniki-ld/QRkot_spreadsheets.git`
+   
 Перейдите в папку с проектом:
-   ```
-   cd QRkot_spreadsheets
-   ```
+   
+   `cd QRkot_spreadsheets`
+   
 Создайте и активируйте виртуальное окружение:
-   ```
-   python3 -m venv venv
-   ```
-   ```
-   source venv/bin/activate
-   ```
+   
+   `python3 -m venv venv`
+   
+   
+   `source venv/bin/activate'
+   
 Обновите менеджер пакетов (pip):
-   ```
-   pip3 install --upgrade pip
-   ```
+
+   `pip3 install --upgrade pip`
+
 Установите необходимые зависимости:
-   ```
-   pip3 install -r requirements.txt
-   ```
-Создайте файл с переменными окружения `.env`:
-   ```
-   touch .env
-   ```
-Опишите переменными окружения:
-   ```
-   APP_TITLE=<ваше название приложения>
-   APP_DESCRIPTION=<ваше описание проекта>
-   DATABASE_URL=<настройки подключения к БД, например: sqlite+aiosqlite:///./development.db>
-   SECRET=<секретный ключ>
-   FIRST_SUPERUSER_EMAIL=<email первого суперпользователя>
-   FIRST_SUPERUSER_PASSWORD=<пароль первого суперпользователя>
-   # Добавьте данные своего сервисного аккаунта.
-   TYPE=
-   PROJECT_ID=
-   PRIVATE_KEY_ID=
-   PRIVATE_KEY=
-   CLIENT_EMAIL=
-   CLIENT_ID=
-   AUTH_URI=
-   TOKEN_URI=
-   AUTH_PROVIDER_X509_CERT_URL=
-   CLIENT_X509_CERT_URL=
-   EMAIL= 
-   ```
+   
+   `pip3 install -r requirements.txt`
+   
+Создайте файл с переменными окружения `.env`. Необходимые имена переменных можно взять из файла env.example:
+   
+   `touch .env`
 ___
 
 ## Использование
 Примените миграции для создания БД:
-  ```
-  alembic upgrade head
-  ```
+  
+  `alembic upgrade head`
+  
   
 Для запуска проекта выполните команду:
-  ```
-  uvicorn app.main:app --reload
-  ```
+  
+  `uvicorn app.main:app --reload`
+  
 
 _Если в файле `.env` были определены переменные
 `FIRST_SUPERUSER_EMAIL` и `FIRST_SUPERUSER_PASSWORD`, 
